@@ -1,4 +1,6 @@
 import React from 'react'
+import { RiDeleteBin5Line } from "react-icons/ri";
+
 
 const TodoType1 = ({todoName,todoDate,onDeleteClick}) => { 
   
@@ -10,7 +12,10 @@ const TodoType1 = ({todoName,todoDate,onDeleteClick}) => {
 
     <div className="col-2"><button type="button" className="btn btn-danger"
      onClick={()=>onDeleteClick(todoName)}
-    >delete</button>
+    >
+      <RiDeleteBin5Line />
+
+      </button>
     </div>
   </div>
     </div>
