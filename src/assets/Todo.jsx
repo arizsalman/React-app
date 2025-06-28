@@ -14,6 +14,7 @@ const Todo = () => {
   // ];
   // const [todoItems,setTodoItems] =useState(initialTodoItems)
   const [todoItems,setTodoItems] =useState([])
+  
   const handleNewItem = (todoName, todoDate )=>{
     console.log(`New Item Add : ${todoName}`,`Date:${todoDate}`);  
   
@@ -23,7 +24,11 @@ const Todo = () => {
  setTodoItems(newTodoItem) 
 }
 
-const handleDeleteItem=()=>{}
+const handleDeleteItem=(todoItemName)=>{
+  const newTodoItems=todoItems.filter(item=> item.name !== todoItemName );
+  console.log(`item Delete : ${todoItemName}`);
+  setTodoItems(newTodoItems) ;
+};
 
 
   return (
@@ -34,7 +39,10 @@ const handleDeleteItem=()=>{}
     <div className='item-cantainer'>
     
     {todoItems.map(item => (
-        <TodoType1 key={item.name} todoName={item.name} todoDate={item.dueDate} />
+        <TodoType1 key={item.name} 
+        todoName={item.name} todoDate={item.dueDate}
+         onDeleteClick={handleDeleteItem}
+        />
       ))}
    
     
