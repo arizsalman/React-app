@@ -1,7 +1,9 @@
 import React from 'react'
 import Random from './assets/Random'
-import Todo from './assets/todo'
+
+
 import "./App.css"
+import Todo from './assets/todo'
 
 
 const App = () => {
@@ -9,7 +11,8 @@ const App = () => {
     <div>
       {/* <h1>My Name Is Ariz Salman</h1> */}
       {/* <Random/> */}
-      <Todo/>
+      {/* <Todo/> */}
+    <Todo></Todo>
     </div>
   )
 }
