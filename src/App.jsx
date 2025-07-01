@@ -1,10 +1,10 @@
 import React from 'react'
 import Random from './assets/Random'
 // import Todo from './assets/components/Todo';
-import Todo from './assets/compounent/Todo.jsx';
+// import Todo from './assets/compounent/Todo.jsx';
 
 import "./App.css"
-// import Todo from './assets/todo'
+import Todo from './assets/todo'
 
 
 const App = () => {
